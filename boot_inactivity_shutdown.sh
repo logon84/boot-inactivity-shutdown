@@ -2,7 +2,7 @@
 #This script requires xprintidle and enhanced notify-send (https://github.com/vlevit/notify-send.sh)
 if [ $(sleep 600 && xprintidle) -gt "598000" ]
 then
-    countdown=30
+	countdown=30
 	ID=$(notify-send.sh Autoshutdown -t 1 "Shutting down in $countdown seconds" -p)
 	while [ $(xprintidle) -gt "598000" ]
 	do
