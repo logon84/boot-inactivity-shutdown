@@ -11,7 +11,7 @@ do
 	$(gdbus call --session \
 	--dest org.freedesktop.Notifications \
 	--object-path /org/freedesktop/Notifications \
-	--method org.freedesktop.Notifications.Notify sss \
+	--method org.freedesktop.Notifications.Notify bis \
 	"$(</tmp/bis.id)" \
 	gtk-dialog-info "Boot Inactivity Shutdown" "Shutting down in $countdown seconds" [] {} 1000 | \
 	sed 's/(uint32 \([0-9]\+\),)/\1/g' > /tmp/bis.id)
